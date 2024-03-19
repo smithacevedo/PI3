@@ -1,5 +1,5 @@
 composer update
 Crear archivo .env en la carpeta PI3
 Copiar todo el contenido del archivo .env.example y pegarlo en el archivo .env
-php artisan server
+php artisan serve
 Generar key
