@@ -1,0 +1,4 @@
+composer update
+Crear archivo .env
+php artisan server
+Generar key
