@@ -91,33 +91,23 @@
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
-                <div data-i18n="Layouts">Libro</div>
+                <div data-i18n="Libro">Libro</div>
               </a>
 
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="layouts-without-menu.html" class="menu-link">
-                    <div data-i18n="Without menu">Crear Libro</div>
+                  <a href="/libro/create" class="menu-link">
+                    <div data-i18n="Crear Libro">Crear Libro</div>
                   </a>
                 </li>
                 <li class="menu-item">
                   <a href="layouts-without-navbar.html" class="menu-link">
-                    <div data-i18n="Without navbar">Editar Libro</div>
+                    <div data-i18n="Editar Libro">Editar Libro</div>
                   </a>
                 </li>
                 <li class="menu-item">
                   <a href="layouts-container.html" class="menu-link">
-                    <div data-i18n="Container">Container</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-fluid.html" class="menu-link">
-                    <div data-i18n="Fluid">Fluid</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-blank.html" class="menu-link">
-                    <div data-i18n="Blank">Blank</div>
+                    <div data-i18n="Eliminar Libro">Eliminar Libro</div>
                   </a>
                 </li>
               </ul>

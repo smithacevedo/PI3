@@ -1,8 +1,12 @@
 <?php
 
+use App\Http\Controllers\BiblioTecController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LibroController;
+
+
 
 Route::get('/', function () {
     return view('home');
@@ -30,3 +34,7 @@ Route::get('/logout', [SessionController::class, 'destroy'])
 Route::get('/admin', [AdminController::class, 'index'])
     ->middleware('auth.admin')
     ->name('admin.index');
+Route::resource('layouts', BiblioTecController::class);
+Route::resource('libro',LibroController::class);
+
+
