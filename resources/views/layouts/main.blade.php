@@ -101,13 +101,8 @@
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="layouts-without-navbar.html" class="menu-link">
-                    <div data-i18n="Editar Libro">Editar Libro</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-container.html" class="menu-link">
-                    <div data-i18n="Eliminar Libro">Eliminar Libro</div>
+                  <a href="/libro" class="menu-link">
+                    <div data-i18n="Editar O Eliminar Libro">Editar O Eliminar Libro</div>
                   </a>
                 </li>
               </ul>

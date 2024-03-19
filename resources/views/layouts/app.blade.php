@@ -9,6 +9,7 @@
     <!-- Tailwind CSS Link -->
     <link rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
     <!-- Fontawesome Link
     <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">

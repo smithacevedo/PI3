@@ -63,9 +63,11 @@ class LibroController extends Controller
      * @param  \App\Models\Libro  $libro
      * @return \Illuminate\Http\Response
      */
-    public function edit(Libro $libro)
+    public function edit($id)
     {
         //
+        $libro = Libro::findOrFail($id);
+        return view('libro.edit', compact('libro'));
     }
 
     /**
@@ -75,9 +77,14 @@ class LibroController extends Controller
      * @param  \App\Models\Libro  $libro
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Libro $libro)
+    public function update(Request $request, $id)
     {
         //
+        $datosLibro = request()->except(['_token', '_method']);
+        Libro::where('id', '=', $id)->update($datosLibro);
+
+        $libro = Libro::findOrFail($id);
+        return view('libro.edit', compact('libro'));
     }
 
     /**
@@ -86,8 +93,10 @@ class LibroController extends Controller
      * @param  \App\Models\Libro  $libro
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Libro $libro)
+    public function destroy($id)
     {
         //
+        Libro::destroy($id);
+        return redirect('libro');
     }
 }
