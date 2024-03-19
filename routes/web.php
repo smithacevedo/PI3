@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('producto', 'App\Http\Controllers\ProductoController');
+Route::resource('biblioTec', 'App\Http\Controllers\BiblioTecController');
