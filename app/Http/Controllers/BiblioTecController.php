@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ProductoController extends Controller
+class BiblioTecController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        return view('producto.index');
+        return view('biblioTec.index');
     }
 
     /**
