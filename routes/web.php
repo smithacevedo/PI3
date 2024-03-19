@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BiblioTecController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LibroController;
 
@@ -18,5 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('layouts', BiblioTecController::class);
 Route::resource('libro',LibroController::class);
+
 
