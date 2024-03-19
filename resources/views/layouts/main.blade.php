@@ -161,7 +161,7 @@
 
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="layouts-without-menu.html" class="menu-link">
+                  <a href="http://127.0.0.1:8000/layouts" class="menu-link">
                     <div data-i18n="Without menu">Crear Libro</div>
                   </a>
                 </li>
