@@ -23,7 +23,7 @@ class RegisterController extends Controller {
         $user = User::create(request(['name', 'email', 'password']));
 
         auth()->login($user);
-        return redirect()->to('/');
+        return redirect()->route('biblioTec.index'); 
     }
     
 }
