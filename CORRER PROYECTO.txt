@@ -1,5 +1,6 @@
 composer update
 Crear archivo .env en la carpeta PI3
+php artisan migrate
 Copiar todo el contenido del archivo .env.example y pegarlo en el archivo .env
 php artisan serve
 Generar key
