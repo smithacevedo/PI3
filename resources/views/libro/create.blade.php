@@ -1,3 +1,6 @@
+@extends('layouts.main')
+@section('contenido')
+
 <head>
     <title>Crear Libro</title>
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
@@ -27,5 +30,8 @@
         <input type="text" name="Año" id="Año" class="form-control">
     </div>
 
+    <p></p>
+
     <input type="submit" value="Guardar datos" class="btn btn-primary">
 </form>
+@endsection

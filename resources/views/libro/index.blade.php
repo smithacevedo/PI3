@@ -1,3 +1,6 @@
+@extends('layouts.main')
+@section('contenido')
+
 <head>
     <title>Lista de libros</title>
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
@@ -37,3 +40,5 @@
         @endforeach
     </tbody>
 </table>
+
+@endsection
