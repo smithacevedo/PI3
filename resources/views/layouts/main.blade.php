@@ -117,28 +117,13 @@
 
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="layouts-without-menu.html" class="menu-link">
+                  <a href="/autor/create" class="menu-link">
                     <div data-i18n="Without menu">Crear Autor</div>
                   </a>
                 </li>
                 <li class="menu-item">
                   <a href="layouts-without-navbar.html" class="menu-link">
-                    <div data-i18n="Without navbar">Editar Autor</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-container.html" class="menu-link">
-                    <div data-i18n="Container">Container</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-fluid.html" class="menu-link">
-                    <div data-i18n="Fluid">Fluid</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="layouts-blank.html" class="menu-link">
-                    <div data-i18n="Blank">Blank</div>
+                    <div data-i18n="Without navbar">Editar O Eliminar Autor</div>
                   </a>
                 </li>
               </ul>
