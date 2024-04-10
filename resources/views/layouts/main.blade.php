@@ -102,7 +102,7 @@
                 </li>
                 <li class="menu-item">
                   <a href="/libro" class="menu-link">
-                    <div data-i18n="Editar O Eliminar Libro">Editar O Eliminar Libro</div>
+                    <div data-i18n="Editar O Eliminar Libro">Visualizar</div>
                   </a>
                 </li>
               </ul>
@@ -123,7 +123,7 @@
                 </li>
                 <li class="menu-item">
                   <a href="layouts-without-navbar.html" class="menu-link">
-                    <div data-i18n="Without navbar">Editar O Eliminar Autor</div>
+                    <div data-i18n="Without navbar">Visualizar</div>
                   </a>
                 </li>
               </ul>
@@ -131,10 +131,10 @@
 
           </ul>
           <div class="card-body">
-                          <div class="mb-2 mb-md-0 text-sm-right">
-                            <a href="{{ route('login.destroy') }}" class="btn btn-danger border">Cerrar sesión</a>
-                          </div>
-                        </div>
+            <div class="mb-2 mb-md-0 text-sm-right">
+                <a href="{{ route('login.destroy') }}" class="btn btn-danger border">Cerrar sesión</a>
+            </div>
+          </div>
         </aside>
         <!-- / Menu -->
 
