@@ -130,6 +130,11 @@
             </li>
 
           </ul>
+          <div class="card-body">
+                          <div class="mb-2 mb-md-0 text-sm-right">
+                            <a href="{{ route('login.destroy') }}" class="btn btn-danger border">Cerrar sesión</a>
+                          </div>
+                        </div>
         </aside>
         <!-- / Menu -->
 
@@ -164,11 +169,7 @@
                             data-app-light-img="illustrations/man-with-laptop-light.png"
                           />
                         </div>
-                        <div class="card-body">
-                          <div class="mb-2 mb-md-0  text-center text-sm-right">
-                            <a href="{{ route('login.destroy') }}" class="btn btn-danger border">Cerrar sesión</a>
-                          </div>
-                        </div>
+                        
                       </div>
                     </div>
                   </div>
