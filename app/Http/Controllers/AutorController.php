@@ -81,7 +81,7 @@ class AutorController extends Controller
     {
         //
         $datosAutor = request()->except(['_token', '_method']);
-        Autor::where('Nombre', '=', $id)->update($datosAutor);
+        Autor::where('id', '=', $id)->update($datosAutor);
 
         $autor = Autor::findOrFail($id);
         return view('autor.edit', compact('autor'));

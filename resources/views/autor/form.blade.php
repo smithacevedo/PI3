@@ -4,7 +4,7 @@
 </head>
 
 
-<!-- Formulario de creación de libros -->
+<!-- Formulario de creación de autores -->
 <form action="{{ url('/autor') }}" method="post" class="book-form">
     @csrf
     <div class="form-group">
@@ -14,12 +14,12 @@
 
     <div class="form-group">
         <label for="Nacionalidad">Nacionalidad</label>
-        <input type="text" name="Nacionalidad" value="{{ $autor->Tipo }}" id="Nacionalidad" class="form-control">
+        <input type="text" name="Nacionalidad" value="{{ $autor->Nacionalidad }}" id="Nacionalidad" class="form-control">
     </div>
 
     <div class="form-group">
         <label for="Fecha_Nacimiento">Fecha_Nacimiento</label>
-        <input type="text" name="Fecha_Nacimiento" value="{{ $autor->Editorial }}" id="Fecha_Nacimiento" class="form-control">
+        <input type="text" name="Fecha_Nacimiento" value="{{ $autor->Fecha_Nacimiento }}" id="Fecha_Nacimiento" class="form-control">
     </div>
     
     <input type="submit" value="Guardar datos" class="btn btn-primary">

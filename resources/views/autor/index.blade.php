@@ -21,10 +21,11 @@
         @foreach($autores as $autor)
         <tr>
             
+            <td>{{ $autor->id }}</td>
             <td>{{ $autor->Nombre }}</td>
             <td>{{ $autor->Nacionalidad }}</td>
             <td>{{ $autor->Fecha_Nacimiento }}</td>
-          <td>
+            <td>
                 <a href="{{ url('/autor/'.$autor->id.'/edit')}}">
                     Editar
                 </a>
