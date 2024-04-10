@@ -23,7 +23,7 @@
             
             <td>{{ $autor->Nombre }}</td>
             <td>{{ $autor->Nacionalidad }}</td>
-            <td>{{ $autor->Fecha_Nacimineto }}</td>
+            <td>{{ $autor->Fecha_Nacimiento }}</td>
           <td>
                 <a href="{{ url('/autor/'.$autor->id.'/edit')}}">
                     Editar
