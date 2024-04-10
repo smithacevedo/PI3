@@ -21,8 +21,8 @@
     </div>
 
     <div class="form-group">
-        <label for="Fecha_Nacimineto">Fecha_Nacimineto</label>
-        <input type="text" name="Fecha_Nacimineto" id="Fecha_Nacimineto" class="form-control">
+        <label for="Fecha_Nacimiento">Fecha_Nacimiento</label>
+        <input type="text" name="Fecha_Nacimiento" id="Fecha_Nacimiento" class="form-control">
     </div>
 
 

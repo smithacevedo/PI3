@@ -18,8 +18,8 @@
     </div>
 
     <div class="form-group">
-        <label for="Fecha_Nacimineto">Fecha_Nacimineto</label>
-        <input type="text" name="Fecha_Nacimineto" value="{{ $autor->Editorial }}" id="Fecha_Nacimineto" class="form-control">
+        <label for="Fecha_Nacimiento">Fecha_Nacimiento</label>
+        <input type="text" name="Fecha_Nacimiento" value="{{ $autor->Editorial }}" id="Fecha_Nacimiento" class="form-control">
     </div>
     
     <input type="submit" value="Guardar datos" class="btn btn-primary">
