@@ -13,25 +13,25 @@
             <th>Nombre</th>
             <th>Nacionalidad</th>
             <th>Fecha_Nacimiento</th>
+            <th>Acciones</th> <!-- Corregido "Aciones" a "Acciones" -->
         </tr>
     </thead>
 
     <tbody>
-        @foreach($libros as $libro)
+        @foreach($autores as $autor)
         <tr>
-            <td>{{ $libro->id }}</td>
-            <td>{{ $libro->Nombre }}</td>
-            <td>{{ $libro->Tipo }}</td>
-            <td>{{ $libro->Editorial }}</td>
-            <td>{{ $libro->Año }}</td>
-            <td>
-                <a href="{{ url('/libro/'.$libro->id.'/edit')}}">
+            
+            <td>{{ $autor->Nombre }}</td>
+            <td>{{ $autor->Nacionalidad }}</td>
+            <td>{{ $autor->Fecha_Nacimineto }}</td>
+          <td>
+                <a href="{{ url('/autor/'.$autor->id.'/edit')}}">
                     Editar
                 </a>
-                <form action="{{ url('/libro/'.$libro->id) }}" method="post">
+                <form action="{{ url('/autor/'.$autor->id) }}" method="post">
                     @csrf
                     {{ method_field('DELETE') }}
-                    <input type="submit" onclick="return confirm('¿Seguro que quieres eliminar este libro?')" value="Borrar">
+                    <input type="submit" onclick="return confirm('¿Seguro que quieres eliminar este autor?')" value="Borrar">
                 </form>
             </td>
         </tr>

@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LibroController;
-
+use App\Http\Controllers\AutorController;
 
 
 Route::get('/', function () {
@@ -36,5 +36,5 @@ Route::get('/admin', [AdminController::class, 'index'])
     ->name('admin.index');
 Route::resource('layouts', BiblioTecController::class);
 Route::resource('libro',LibroController::class);
-
+Route::resource('autor',AutorController::class);
 

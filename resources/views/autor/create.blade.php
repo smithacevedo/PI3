@@ -7,7 +7,7 @@
 </head>
 
 
-<!-- Formulario de creación de libros -->
+<!-- Formulario de creación de Autores -->
 <form action="{{ url('/autor') }}" method="post" class="book-form">
     @csrf
     <div class="form-group">
