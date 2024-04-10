@@ -63,10 +63,10 @@ class AutorController extends Controller
      * @param  \App\Models\Autor  $Autor
      * @return \Illuminate\Http\Response
      */
-     public function edit($Nombre) 
+     public function edit($id) 
      {
          //
-         $autor = Autor::findOrFail($Nombre);
+         $autor = Autor::findOrFail($id);
          return view('autor.edit', compact('autor'));
      }
 
@@ -77,13 +77,13 @@ class AutorController extends Controller
      * @param  \App\Models\Autor  $autor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $Nombre)
+    public function update(Request $request, $id)
     {
         //
         $datosAutor = request()->except(['_token', '_method']);
-        Autor::where('Nombre', '=', $Nombre)->update($datosAutor);
+        Autor::where('Nombre', '=', $id)->update($datosAutor);
 
-        $autor = Autor::findOrFail($Nombre);
+        $autor = Autor::findOrFail($id);
         return view('autor.edit', compact('autor'));
     }
 
@@ -93,10 +93,10 @@ class AutorController extends Controller
      * @param  \App\Models\Autor  $autor
      * @return \Illuminate\Http\Response
      */
-    public function destroy($Nombre)
+    public function destroy($id)
     {
         //
-        Autor::destroy($Nombre);
+        Autor::destroy($id);
         return redirect('autor');
     }
 }
