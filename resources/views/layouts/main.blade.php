@@ -102,7 +102,7 @@
                 </li>
                 <li class="menu-item">
                   <a href="/libro" class="menu-link">
-                    <div data-i18n="Editar O Eliminar Libro">Editar O Eliminar Libro</div>
+                    <div data-i18n="Editar O Eliminar Libro">Visualizar</div>
                   </a>
                 </li>
               </ul>
@@ -123,7 +123,7 @@
                 </li>
                 <li class="menu-item">
                   <a href="layouts-without-navbar.html" class="menu-link">
-                    <div data-i18n="Without navbar">Editar O Eliminar Autor</div>
+                    <div data-i18n="Without navbar">Visualizar</div>
                   </a>
                 </li>
               </ul>
@@ -144,6 +144,7 @@
               <div class="row">
                 <div class="col-lg-12 mb-4 order-0">
                   <div class="card">
+                    
                     <div class="d-flex align-items-end row">
                       <div class="col-sm-7">
                         <div class="card-body">
@@ -154,7 +155,9 @@
 
                         </div>
                       </div>
+                      
                       <div class="col-sm-5 text-center text-sm-left">
+
                         <div class="card-body pb-0 px-0 px-md-4">
                           <img
                             src="../assets/img/illustrations/man-with-laptop-light.png"
@@ -164,7 +167,13 @@
                             data-app-light-img="illustrations/man-with-laptop-light.png"
                           />
                         </div>
+                        <div class="card-body">
+                          <div class="mb-2 mb-md-0  text-center text-sm-right">
+                            <a href="{{ route('login.destroy') }}" class="btn btn-danger border">Cerrar sesión</a>
+                          </div>
+                        </div>
                       </div>
+                     </div>
                     </div>
                   </div>
                 </div>
@@ -196,7 +205,7 @@
               </div>
             </div>
             <!-- / Content -->
-
+                
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
               <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
@@ -212,6 +221,7 @@
             <!-- / Footer -->
 
             <div class="content-backdrop fade"></div>
+            
           </div>
           <!-- Content wrapper -->
         </div>
