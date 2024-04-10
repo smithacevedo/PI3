@@ -1,12 +1,12 @@
-<!-- Formulario de edición de libros -->
+<!-- Formulario de edición de autores -->
 @extends('layouts.main')
 @section('contenido')
 
-<form action="{{ url('/libro/'.$libro->id) }}" method="post">
+<form action="{{ url('/autor/'.$autor->id) }}" method="post">
 @csrf
 {{ method_field('PATCH')}}
 
-@include('libro.form')
+@include('autor.form')
 
 </form>
 
