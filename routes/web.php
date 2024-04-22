@@ -37,4 +37,4 @@ Route::get('/admin', [AdminController::class, 'index'])
 Route::resource('layouts', BiblioTecController::class);
 Route::resource('libro',LibroController::class);
 Route::resource('autor',AutorController::class);
-Route::get('imprimirAutor','App\http\Controllers\PdfController@imprimirAutor')->name('imprimirAutor');
+Route::get('imprimirAutores','App\http\Controllers\PdfController@imprimirAutor')->name('imprimirAutores');

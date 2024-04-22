@@ -7,10 +7,13 @@
 </head>
 
 <div>
-<a href="{{url('imprimirAutor')}}" class="pull-right">
+<a href="{{url('imprimirAutores')}}" class="pull-right">
 <button class="btn btn-primary">Imprimir Pdf</button> </a>
+
+
+<br><br/>
 </div>
-<table class="book-table">
+<table class="book-table" >
     <thead class="thead-light">
         <tr>
             <th>#</th>

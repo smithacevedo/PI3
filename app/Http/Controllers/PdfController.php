@@ -12,8 +12,8 @@ class PdfController extends Controller
     
     public function imprimirAutor(Request $request)
     {
-        $Autor = Autor::orderBy('id', 'ASC')->get();
-        $pdf = \PDF::loadView('autorPDF.pdf', ['autor' => $Autor]);
+        $autores = Autor::orderBy('id', 'ASC')->get();
+        $pdf = \PDF::loadView('autor.autoresPDF', ['autor' => $autores]);
         $pdf->setPaper('carta', 'A4');
         return $pdf->stream();
     }
