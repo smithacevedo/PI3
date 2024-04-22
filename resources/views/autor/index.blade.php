@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
 </head>
 
+<div>
+<a href="{{url('imprimirAutor')}}" class="pull-right">
+<button class="btn btn-primary">Imprimir Pdf</button> </a>
+</div>
 <table class="book-table">
     <thead class="thead-light">
         <tr>
