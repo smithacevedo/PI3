@@ -80,7 +80,7 @@
           <ul class="menu-inner py-1">
             <!-- home -->
             <li class="menu-item active">
-              <a href="#" class="menu-link" onclick="window.location.reload();">
+              <a href="/biblioTec" class="menu-link" onclick="window.location.reload();">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Home</div>
               </a>
