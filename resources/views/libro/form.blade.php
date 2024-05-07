@@ -27,5 +27,7 @@
         <input type="text" name="Año" value="{{ $libro->Año }}" id="Año" class="form-control">
     </div>
 
+
+    <p></p>
     <input type="submit" value="Guardar datos" class="btn btn-primary">
 </form>

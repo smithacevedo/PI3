@@ -22,5 +22,7 @@
         <input type="text" name="Fecha_Nacimiento" value="{{ $autor->Fecha_Nacimiento }}" id="Fecha_Nacimiento" class="form-control">
     </div>
     
+
+    <p></p>
     <input type="submit" value="Guardar datos" class="btn btn-primary">
 </form>

@@ -43,4 +43,44 @@
     </tbody>
 </table>
 
+
+
+
+
+<p></p>
+<!-- Paginación -->
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {{-- Botón "Anterior" --}}
+        @if ($autores->onFirstPage())
+            <li class="page-item disabled">
+                <span class="page-link">&laquo;</span>
+            </li>
+        @else
+            <li class="page-item">
+                <a class="page-link" href="{{ $autores->previousPageUrl() }}" rel="prev">&laquo;</a>
+            </li>
+        @endif
+
+        {{-- Números de página --}}
+        @foreach ($autores->getUrlRange(1, $autores->lastPage()) as $page => $url)
+            <li class="page-item {{ ($autores->currentPage() == $page) ? 'active' : '' }}">
+                <a class="page-link" href="{{ $url }}">{{ $page }}</a>
+            </li>
+        @endforeach
+
+        {{-- Botón "Siguiente" --}}
+        @if ($autores->hasMorePages())
+            <li class="page-item">
+                <a class="page-link" href="{{ $autores->nextPageUrl() }}" rel="next">&raquo;</a>
+            </li>
+        @else
+            <li class="page-item disabled">
+                <span class="page-link">&raquo;</span>
+            </li>
+        @endif
+    </ul>
+</nav>
+
+
 @endsection

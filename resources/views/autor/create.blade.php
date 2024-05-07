@@ -27,7 +27,6 @@
 
 
     <p></p>
-
     <input type="submit" value="Guardar datos" class="btn btn-primary">
 </form>
 @endsection
