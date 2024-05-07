@@ -85,8 +85,7 @@ class LibroController extends Controller
         $datosLibro = request()->except(['_token', '_method']);
         Libro::where('id', '=', $id)->update($datosLibro);
 
-        $libro = Libro::findOrFail($id);
-        return view('libro.edit', compact('libro'));
+        return redirect('/libro');
     }
 
     /**

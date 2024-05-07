@@ -85,8 +85,8 @@ class AutorController extends Controller
         $datosAutor = request()->except(['_token', '_method']);
         Autor::where('id', '=', $id)->update($datosAutor);
 
-        $autor = Autor::findOrFail($id);
-        return view('autor.edit', compact('autor'));
+        
+        return redirect('/autor');
     }
 
     /**
