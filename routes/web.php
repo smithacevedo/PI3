@@ -38,3 +38,5 @@ Route::resource('layouts', BiblioTecController::class);
 Route::resource('libro',LibroController::class);
 Route::resource('autor',AutorController::class);
 Route::get('imprimirAutores','App\http\Controllers\PdfController@imprimirAutor')->name('imprimirAutores');
+Route::get('imprimirLibros','App\http\Controllers\PdfController@imprimirLibro')->name('imprimirLibros');
+
