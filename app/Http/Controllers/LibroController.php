@@ -43,6 +43,8 @@ class LibroController extends Controller
         $datosLibro = request()->except('_token');
         Libro::insert($datosLibro);
 
+        return redirect('/libro');
+
         //return response()->json($datosLibro);
     }
 

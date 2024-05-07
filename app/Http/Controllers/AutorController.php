@@ -43,6 +43,8 @@ class AutorController extends Controller
         $datosAutor = request()->except('_token');
         Autor::insert($datosAutor);
 
+        return redirect('/autor');
+
         //return response()->json($datosAutor);
     }
 
