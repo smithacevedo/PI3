@@ -30,4 +30,12 @@
 
     <p></p>
     <input type="submit" value="Guardar datos" class="btn btn-primary">
+    <button type="button" onclick="cancelar()" class="btn btn-secondary">Cancelar</button>
 </form>
+
+<!-- Lógica para cancelar edit -->
+<script>
+    function cancelar() {
+        window.location.href = "{{ url('/libro') }}";
+    }
+</script>
