@@ -15,13 +15,13 @@ Route::get('/', function () {
 Route::resource('biblioTec', 'App\Http\Controllers\BiblioTecController');
 
 
-Route::get('/register',[ RegisterController::class, 'create'])->name('register.index');
+Route::get('/register', [RegisterController::class, 'create'])->name('register.index');
 
 Route::post('/register', [RegisterController::class, 'store'])
     ->name('register.store');
 
 
-Route::get('/login',[ SessionController::class, 'create'])->name('login.index');
+Route::get('/login', [SessionController::class, 'create'])->name('login.index');
 
 Route::post('/login', [SessionController::class, 'store'])
     ->name('login.store');
@@ -35,8 +35,7 @@ Route::get('/admin', [AdminController::class, 'index'])
     ->middleware('auth.admin')
     ->name('admin.index');
 Route::resource('layouts', BiblioTecController::class);
-Route::resource('libro',LibroController::class);
-Route::resource('autor',AutorController::class);
-Route::get('imprimirAutores','App\http\Controllers\PdfController@imprimirAutor')->name('imprimirAutores');
-Route::get('imprimirLibros','App\http\Controllers\PdfController@imprimirLibro')->name('imprimirLibros');
-
+Route::resource('libro', LibroController::class);
+Route::resource('autor', AutorController::class);
+Route::get('imprimirAutores', 'App\http\Controllers\PdfController@imprimirAutor')->name('imprimirAutores');
+Route::get('imprimirLibros', 'App\http\Controllers\PdfController@imprimirLibro')->name('imprimirLibros');
