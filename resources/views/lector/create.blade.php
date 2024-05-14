@@ -6,13 +6,22 @@
         <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
     </head>
 
+    <?php
+    // Obtener el próximo número de socio disponible
+    use App\Models\Lector;
+    $ultimoSocio = Lector::orderBy('NumSocio', 'desc')->first(); // Obtener el último socio
+    $proximoNumSocio = $ultimoSocio ? $ultimoSocio->NumSocio + 1 : 1; // Incrementar el último socio para obtener el próximo
+    ?>
+
+
 
     <!-- Formulario de creación de lectores -->
     <form action="{{ url('/lector') }}" method="post" class="lector-form">
         @csrf
         <div class="form-group">
             <label for="NumSocio">Número de Socio</label>
-            <input type="text" name="NumSocio" id="NumSocio" class="form-control">
+            <input type="number" name="NumSocio" id="NumSocio" class="form-control" value="{{ $proximoNumSocio }}" readonly>
+            <small class="form-text text-muted">Se genera automáticamente</small>
         </div>
 
         <div class="form-group">

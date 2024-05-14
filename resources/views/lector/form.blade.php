@@ -9,7 +9,7 @@
     @csrf
     <div class="form-group">
         <label for="NumSocio">Número de Socio</label>
-        <input type="text" name="NumSocio" value="{{ $lector->NumSocio }}" id="NumSocio" class="form-control">
+        <input type="text" name="NumSocio" value="{{ $lector->NumSocio }}" id="NumSocio" class="form-control" readonly>
     </div>
 
     <div class="form-group">
