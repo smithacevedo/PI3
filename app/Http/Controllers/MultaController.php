@@ -16,7 +16,6 @@ class MultaController extends Controller
      */
     public function index()
     {
-
         $multas = Multa::paginate(5);
 
         // Calcular el valor de la multa y la diferencia de días para cada multa

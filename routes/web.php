@@ -46,3 +46,4 @@ Route::resource('multa', MultaController::class);
 Route::get('imprimirAutores', 'App\http\Controllers\PdfController@imprimirAutor')->name('imprimirAutores');
 Route::get('imprimirLibros', 'App\http\Controllers\PdfController@imprimirLibro')->name('imprimirLibros');
 Route::get('imprimirLectores', 'App\http\Controllers\PdfController@imprimirLector')->name('imprimirLectores');
+Route::get('imprimirMultas', 'App\http\Controllers\PdfController@imprimirMulta')->name('imprimirMultas');
