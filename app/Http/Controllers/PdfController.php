@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Autor;
 use App\Models\Libro;
+use App\Models\Lector;
 use Illuminate\Http\Request;
 use pdf;
 use App\Models\Producto;
@@ -26,4 +27,12 @@ class PdfController extends Controller
         $pdf->setPaper('carta', 'A4');
         return $pdf->stream();
     }
+    public function imprimirLector(Request $request)
+{
+    $lectores = Lector::orderBy('NumSocio', 'ASC')->get();
+    return \PDF::loadView('lector.lectoresPDF', compact('lectores'))
+                ->setPaper('carta', 'A4')
+                ->stream();
+}
+
 }

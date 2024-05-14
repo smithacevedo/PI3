@@ -44,8 +44,8 @@
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="{{ asset('assets/vendor/fonts/boxicons.css') }}" />
-    <!-- 
-      {{ asset('assets/vendor/js/helpers.js') }} 
+    <!--
+      {{ asset('assets/vendor/js/helpers.js') }}
     -->
 
 
@@ -90,8 +90,8 @@
             <!-- Libro -->
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-layout"></i>
-                <div data-i18n="Libro">Libro</div>
+                  <i class="menu-icon tf-icons bx bx-book"></i>
+                  <div data-i18n="Libro">Libro</div>
               </a>
 
               <ul class="menu-sub">
@@ -111,8 +111,8 @@
             <!--Autor -->
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-layout"></i>
-                <div data-i18n="Layouts">Autor</div>
+                  <i class="menu-icon tf-icons bx bx-book"></i>
+                  <div data-i18n="Layouts">Autor</div>
               </a>
 
               <ul class="menu-sub">
@@ -128,6 +128,49 @@
                 </li>
               </ul>
             </li>
+
+            <!-- Lector -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                  <i class="menu-icon tf-icons bx bx-user"></i>
+                  <div data-i18n="Lector">Lector</div>
+              </a>
+
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="/lector/create" class="menu-link">
+                    <div data-i18n="Crear Lector">Crear Lector</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="/lector" class="menu-link">
+                    <div data-i18n="Editar O Eliminar Lector">Visualizar</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Multa -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-dollar-circle"></i>
+                  <div data-i18n="Multa">Multas</div>
+              </a>
+
+              <ul class="menu-sub">
+                  <li class="menu-item">
+                      <a href="/multa/create" class="menu-link">
+                          <div data-i18n="Crear Multa">Crear Multa</div>
+                      </a>
+                  </li>
+                  <li class="menu-item">
+                      <a href="/multa" class="menu-link">
+                          <div data-i18n="Visualizar Multas">Visualizar Multas</div>
+                      </a>
+                  </li>
+              </ul>
+            </li>
+
 
           </ul>
           <div class="card-body">
@@ -184,7 +227,7 @@
                     </div>
                   </div>
                 </div>
-                <!-- Total Revenue 
+                <!-- Total Revenue
                 <div class="col-12 col-lg-8 order-2 order-md-3 order-lg-2 mb-4">
                   <div class="card">
                     <div class="row row-bordered g-0">
@@ -209,7 +252,7 @@
                 <div class="mb-2 mb-md-0">
                   ©
                   <script>
-                    document.write(new Date().getFullYear());
+                      document.write(new Date().getFullYear());
                   </script>
                   | SOFTWARE DISEÑADO POR K.J.S TECHNOLOGY S.A
                 </div>
@@ -232,8 +275,8 @@
  
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
-    <!-- 
-      {{ asset('assets/vendor/js/menu.js') }} 
+    <!--
+      {{ asset('assets/vendor/js/menu.js') }}
     -->
 
     <script src="{{ asset('assets/vendor/libs/jquery/jquery.js') }}"></script>

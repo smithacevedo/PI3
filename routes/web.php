@@ -6,7 +6,10 @@ use App\Http\Controllers\SessionController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LibroController;
 use App\Http\Controllers\AutorController;
-
+use App\Http\Controllers\LectorController;
+use App\Http\Controllers\MultaController;
+use App\Models\Lector;
+use App\Models\Multa;
 
 Route::get('/', function () {
     return view('home');
@@ -37,5 +40,9 @@ Route::get('/admin', [AdminController::class, 'index'])
 Route::resource('layouts', BiblioTecController::class);
 Route::resource('libro', LibroController::class);
 Route::resource('autor', AutorController::class);
+Route::resource('lector', LectorController::class);
+Route::resource('multa', MultaController::class);
+
 Route::get('imprimirAutores', 'App\http\Controllers\PdfController@imprimirAutor')->name('imprimirAutores');
 Route::get('imprimirLibros', 'App\http\Controllers\PdfController@imprimirLibro')->name('imprimirLibros');
+Route::get('imprimirLectores', 'App\http\Controllers\PdfController@imprimirLector')->name('imprimirLectores');
