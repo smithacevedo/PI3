@@ -6,6 +6,7 @@ use App\Models\Autor;
 use App\Models\Libro;
 use App\Models\Lector;
 use App\Models\Multa;
+use App\Models\Prestamo;
 use Illuminate\Support\Facades\Redirect;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -64,4 +65,21 @@ class PdfController extends Controller
         // Devolver el PDF como una respuesta
         return $pdf->stream();
     }
-}
+
+    public function imprimirPrestamo(Request $request)
+    {
+        $prestamos = Prestamo::all();
+        foreach ($prestamos as $prestamo) {
+            $fechaInicio = Carbon::parse($prestamo->fechaInicio);
+            $fechaFin = Carbon::parse($prestamo->fechaFin);
+            $diferenciaDias = $fechaInicio->diffInDays($fechaFin);
+            $valorPrestamo = $diferenciaDias * 500;
+            $prestamo->diferenciaDias = $diferenciaDias;
+            $prestamo->valorPrestamo = $valorPrestamo;
+        }
+        $pdf = \PDF::loadView('prestamos.prestamosPDF', compact('prestamos'));
+        $pdf->setPaper('carta', 'A4');
+    
+        return $pdf->stream();
+    }
+}    

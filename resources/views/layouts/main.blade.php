@@ -171,6 +171,27 @@
               </ul>
             </li>
 
+            <!-- Prestamo -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-dollar-circle"></i>
+                  <div data-i18n="Prestamo">Prestamo</div>
+              </a>
+
+              <ul class="menu-sub">
+                  <li class="menu-item">
+                      <a href="/prestamo/create" class="menu-link">
+                          <div data-i18n="Crear Prestamo">Crear Prestamo</div>
+                      </a>
+                  </li>
+                  <li class="menu-item">
+                      <a href="/prestamo" class="menu-link">
+                          <div data-i18n="Visualizar Prestamo">Visualizar Prestamo</div>
+                      </a>
+                  </li>
+              </ul>
+            </li>
+
 
           </ul>
           <div class="card-body">

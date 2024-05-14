@@ -4,3 +4,13 @@ php artisan migrate
 Copiar todo el contenido del archivo .env.example y pegarlo en el archivo .env
 php artisan serve
 Generar key
+
+
+CREATE TABLE prestamo (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fechaInicio DATETIME,
+    fechaFin DATETIME,
+    numSocio VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
