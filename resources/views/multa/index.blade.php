@@ -29,7 +29,7 @@
             @foreach ($multas as $multa)
                 <tr>
                     <td>{{ $multa->id }}</td>
-                    <td>{{ $multa->NumSocio }}</td>
+                    <td>{{ $multa->numSocio }}</td>
                     <td>{{ $multa->fechaInicio }}</td>
                     <td>{{ $multa->fechaFin }}</td>
                     <td>{{ $multa->diferenciaDias }}</td>

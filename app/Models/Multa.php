@@ -11,5 +11,7 @@ class Multa extends Model
     protected $fillable = [
         'fechaInicio',
         'fechaFin',
+        'numSocio',
+
     ];
 }

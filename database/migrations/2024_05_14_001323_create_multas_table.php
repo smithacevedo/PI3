@@ -15,9 +15,13 @@ return new class extends Migration
     {
         Schema::create('multas', function (Blueprint $table) {
             $table->id();
+            $table->integer('numSocio'); 
             $table->dateTime('fechaInicio');
             $table->dateTime('fechaFin');
             $table->timestamps();
+
+            // Definir la clave foránea
+            $table->foreign('numSocio')->references('NumSocio')->on('lectores');
         });
     }
 
@@ -30,4 +34,5 @@ return new class extends Migration
     {
         Schema::dropIfExists('multas');
     }
+    
 };
