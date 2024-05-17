@@ -56,10 +56,24 @@ class PdfController extends Controller
             // Agregar la diferencia de días y el valor de la multa como propiedades a cada multa
             $multa->diferenciaDias = $diferenciaDias;
             $multa->valorMulta = $valorMulta;
+
+            $nombreyIdLector = Lector::orderBy('NumSocio', 'DESC')
+                ->select('lectores.NumSocio', 'lectores.Nombre')
+                ->get();
+
+            $multa->nombreyIdLector = $nombreyIdLector;
         }
 
         // Generar el PDF y pasar las multas con las variables calculadas
-        $pdf = \PDF::loadView('multa.multasPDF', compact('multas'));
+        $data = ['multas' => $multas];
+
+        if (isset($nombreyIdLector)) {
+            $data['nombreyIdLector'] = $nombreyIdLector;
+        }
+
+        $pdf = \PDF::loadView('multa.multasPDF', $data);
+
+        // Establecer el tamaño del papel
         $pdf->setPaper('carta', 'A4');
 
         // Devolver el PDF como una respuesta
@@ -79,7 +93,7 @@ class PdfController extends Controller
         }
         $pdf = \PDF::loadView('prestamos.prestamosPDF', compact('prestamos'));
         $pdf->setPaper('carta', 'A4');
-    
+
         return $pdf->stream();
     }
-}    
+}
