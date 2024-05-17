@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\MultaFormRequest;
 use App\Models\Multa;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
@@ -62,7 +63,7 @@ class MultaController extends Controller
         return view('multa.create', compact('nombreyIdLector'));
     }
 
-    public function store(Request $request)
+    public function store(MultaFormRequest $request)
     {
         $datosMulta = $request->except('_token');
         Multa::create($datosMulta);
@@ -79,7 +80,7 @@ class MultaController extends Controller
         return view('multa.edit', compact('multa', 'numerosSocio'));
     }
 
-    public function update(Request $request, $id)
+    public function update(MultaFormRequest $request, $id)
     {
         // Excluir la columna 'NumSocio' de los datos que se pasan al método update()
         $datosMulta = $request->except(['_token', '_method', 'numSocio']);
