@@ -16,11 +16,11 @@
         <thead class="thead-light">
             <tr>
                 <th>Multa #</th>
-                <th>Número de Socio</th>
+                <th>Socio</th>
                 <th>Fecha de Inicio</th>
                 <th>Fecha de Fin</th>
                 <th>Días retraso</th>
-                <th>Valor Multa</th>
+                <th>Valor Multa (500 * Días retraso)</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -29,7 +29,11 @@
             @foreach ($multas as $multa)
                 <tr>
                     <td>{{ $multa->id }}</td>
-                    <td>{{ $multa->numSocio }}</td>
+                    @php
+                        // Buscar el lector correspondiente al NumSocio de la multa
+                        $lector = $nombreyIdLector->firstWhere('NumSocio', $multa->numSocio);
+                    @endphp
+                    <td>{{ $multa->numSocio }} - {{ $lector->Nombre }}</td>
                     <td>{{ $multa->fechaInicio }}</td>
                     <td>{{ $multa->fechaFin }}</td>
                     <td>{{ $multa->diferenciaDias }}</td>

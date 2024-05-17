@@ -32,16 +32,34 @@ class MultaController extends Controller
             // Agregar la diferencia de días y el valor de la multa como propiedades a cada multa
             $multa->diferenciaDias = $diferenciaDias;
             $multa->valorMulta = $valorMulta;
+
+            $nombreyIdLector = Lector::orderBy('NumSocio', 'DESC')
+                ->select('lectores.NumSocio', 'lectores.Nombre')
+                ->get();
+
+            $multa->nombreyIdLector = $nombreyIdLector;
         }
 
-        return view('multa.index', compact('multas'));
+        //Condicional sino hay nombre de lectores para mostrar entonces lo omita
+        if (isset($nombreyIdLector)) {
+            return view('multa.index', compact('multas', 'nombreyIdLector'));
+        } else {
+            return view('multa.index', compact('multas'));
+        }
     }
 
     public function create()
     {
         // Obtener todos los números de socio disponibles en la tabla de lectores
-        $numerosSocio = Lector::pluck('NumSocio');
-        return view('multa.create', compact('numerosSocio'));
+        //$numerosSocio = Lector::pluck('NumSocio');
+        //return view('multa.create', compact('numerosSocio'));
+
+        //Consulta de lectores
+        $nombreyIdLector = Lector::orderBy('NumSocio', 'DESC')
+            ->select('lectores.NumSocio', 'lectores.Nombre')
+            ->get();
+
+        return view('multa.create', compact('nombreyIdLector'));
     }
 
     public function store(Request $request)

@@ -20,12 +20,12 @@
         <input type="datetime-local" name="fechaFin" id="fechaFin" class="form-control">
     </div>
 
-    <!-- Desplegable con los números de socio disponibles -->
+    <!-- Desplegable lectores disponibles -->
     <div class="form-group">
-        <label for="numSocio">Número de Socio</label>
+        <label for="numSocio">Socio</label>
         <select name="numSocio" id="numSocio" class="form-control">
-            @foreach ($numerosSocio as $numSocio)
-                <option value="{{ $numSocio }}">{{ $numSocio }}</option>
+            @foreach ($nombreyIdLector as $lector)
+                <option value="{{ $lector->NumSocio }}">{{ $lector->NumSocio }} - {{ $lector->Nombre }}</option>
             @endforeach
         </select>
     </div>
