@@ -19,7 +19,7 @@
 
     <div class="form-group">
         <label for="Fecha_Nacimiento">Fecha_Nacimiento</label>
-        <input type="text" name="Fecha_Nacimiento" value="{{ $autor->Fecha_Nacimiento }}" id="Fecha_Nacimiento" class="form-control">
+        <input type="date" name="Fecha_Nacimiento" value="{{ $autor->Fecha_Nacimiento }}" id="Fecha_Nacimiento" class="form-control">
     </div>
     
 

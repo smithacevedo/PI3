@@ -18,7 +18,7 @@
                 <th>Nombre</th>
                 <th>Nacionalidad</th>
                 <th>Fecha_Nacimiento</th>
-                <th>Acciones</th> <!-- Corregido "Aciones" a "Acciones" -->
+                <th>Acciones</th>
             </tr>
         </thead>
 

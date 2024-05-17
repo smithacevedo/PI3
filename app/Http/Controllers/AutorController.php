@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AutorFormRequest;
 use App\Models\Autor;
 use Illuminate\Http\Request;
 
@@ -36,7 +37,7 @@ class AutorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AutorFormRequest $request)
     {
         //
         //$datosAutor = request()->all();
@@ -79,7 +80,7 @@ class AutorController extends Controller
      * @param  \App\Models\Autor  $autor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(AutorFormRequest $request, $id)
     {
         //
         $datosAutor = request()->except(['_token', '_method']);
