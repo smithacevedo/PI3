@@ -2,12 +2,24 @@
 @extends('layouts.main')
 @section('contenido')
 
-<form action="{{ url('/libro/'.$libro->id) }}" method="post">
-@csrf
-{{ method_field('PATCH')}}
+    <!-- Mensajes de errores -->
+    @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    <!-- -->
 
-@include('libro.form')
+    <form action="{{ url('/libro/' . $libro->id) }}" method="post">
+        @csrf
+        {{ method_field('PATCH') }}
 
-</form>
+        @include('libro.form')
+
+    </form>
 
 @endsection

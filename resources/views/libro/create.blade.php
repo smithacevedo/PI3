@@ -1,5 +1,7 @@
 @extends('layouts.main')
 @section('contenido')
+
+    <!-- Mensajes de errores -->
     @if (count($errors) > 0)
         <div class="alert alert-danger">
             <ul>
@@ -9,6 +11,7 @@
             </ul>
         </div>
     @endif
+    <!-- -->
 
     <head>
         <title>Crear Libro</title>

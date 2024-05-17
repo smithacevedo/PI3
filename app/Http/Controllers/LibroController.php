@@ -80,7 +80,7 @@ class LibroController extends Controller
      * @param  \App\Models\Libro  $libro
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(LibroFormRequest $request, $id)
     {
         //
         $datosLibro = request()->except(['_token', '_method']);
