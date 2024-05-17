@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LectorFormRequest;
 use App\Models\Lector;
 use Illuminate\Http\Request;
 
@@ -36,7 +37,7 @@ class LectorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(LectorFormRequest $request)
     {
         //
         //$datosLector = request()->all();
@@ -77,7 +78,7 @@ class LectorController extends Controller
      * @param  \App\Models\Lector  $lector
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $numSocio)
+    public function update(LectorFormRequest $request, $numSocio)
     {
         //
         $datosLector = request()->except(['_token', '_method']);
