@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LibroFormRequest;
 use App\Models\Libro;
 use Illuminate\Http\Request;
 
@@ -36,14 +37,14 @@ class LibroController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(LibroFormRequest $request)
     {
         //
         //$datosLibro = request()->all();
         $datosLibro = request()->except('_token');
         Libro::insert($datosLibro);
 
-        return redirect('/libro');
+        return redirect('/libro')->with('success', 'Libro creado exitosamente');
 
         //return response()->json($datosLibro);
     }
