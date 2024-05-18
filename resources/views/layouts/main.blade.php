@@ -111,9 +111,9 @@
             <!--Autor -->
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
-                  <i class="menu-icon tf-icons bx bx-book"></i>
-                  <div data-i18n="Layouts">Autor</div>
-              </a>
+                <i class="menu-icon tf-icons bx bx-pencil"></i>
+                <div data-i18n="Layouts">Autor</div>
+            </a>
 
               <ul class="menu-sub">
                 <li class="menu-item">
@@ -153,9 +153,10 @@
             <!-- Multa -->
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-dollar-circle"></i>
-                  <div data-i18n="Multa">Multas</div>
-              </a>
+                <i class="menu-icon tf-icons bx bx-wallet"></i>
+                <div data-i18n="Multa">Multas</div>
+            </a>
+                       
 
               <ul class="menu-sub">
                   <li class="menu-item">
