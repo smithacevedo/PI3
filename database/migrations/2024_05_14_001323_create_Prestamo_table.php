@@ -15,10 +15,16 @@ return new class extends Migration
     {
         Schema::create('prestamo', function (Blueprint $table) {
             $table->id();
+            $table->integer('id_libro'); 
             $table->dateTime('fechaInicio');
             $table->dateTime('fechaFin');
             $table->string('numSocio'); 
+           // $table->foreign('id_libro')->references('id')->on('libros');
+           $table->foreign('numSocio')->references('NumSocio')->on('lectores');
             $table->timestamps();
+
+
+            
         });
     }
 
