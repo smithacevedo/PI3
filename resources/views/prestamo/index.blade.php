@@ -29,7 +29,11 @@
             @foreach ($prestamos as $prestamo)
                 <tr>
                 <td>{{ $prestamo->id }}</td>
-                    <td>{{ $prestamo->numSocio }}</td>
+                @php
+                        // Buscar el lector correspondiente al NumSocio del prestamo
+                        $lector = $nombreyIdLector->firstWhere('NumSocio', $prestamo->numSocio);
+                @endphp 
+                    <td>{{ $prestamo->numSocio }} - {{ $lector->Nombre }}  {{ $lector->Apellido }}</td>
                     <td>{{ $prestamo->fechaInicio }}</td>
                     <td>{{ $prestamo->fechaFin }}</td>
                     <td>{{ $prestamo->valorPrestamo}}</td>

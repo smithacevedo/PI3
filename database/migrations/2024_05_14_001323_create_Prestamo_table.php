@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('prestamo', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_libro'); 
+           // $table->integer('id_libro'); 
             $table->dateTime('fechaInicio');
             $table->dateTime('fechaFin');
             $table->integer('numSocio'); 

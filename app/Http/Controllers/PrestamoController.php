@@ -15,28 +15,36 @@ class PrestamoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-{
-    $prestamos = Prestamo::paginate(5);
-
-    foreach ($prestamos as $prestamo) {
-        $Numero_de_Socio = 
-        $fechaInicio = Carbon::parse($prestamo->fechaInicio);
-        $fechaFin = Carbon::parse($prestamo->fechaFin);
-
-        $diferenciaDias = $fechaInicio->diffInDays($fechaFin);
-        $valorPrestamo = $diferenciaDias * 500;
-
-        $prestamo->diferenciaDias = $diferenciaDias;
-        $prestamo->valorPrestamo = $valorPrestamo;
+    {
+        $prestamos = Prestamo::paginate(5);
+    
+        foreach ($prestamos as $prestamo) {
+            $fechaInicio = Carbon::parse($prestamo->fechaInicio);
+            $fechaFin = Carbon::parse($prestamo->fechaFin);
+            $diferenciaDias = $fechaInicio->diffInDays($fechaFin);
+            $valorPrestamo = $diferenciaDias * 500;
+            $prestamo->diferenciaDias = $diferenciaDias;
+            $prestamo->valorPrestamo = $valorPrestamo;
+            $nombreyIdLector = Lector::orderBy('NumSocio', 'DESC')
+                    ->select('lectores.NumSocio', 'lectores.Nombre', 'lectores.Apellido' )
+                    ->get();
+            $prestamo->nombreyIdLector = $nombreyIdLector;
+    
+        }
+         if (isset($nombreyIdLector)) {
+                return view('prestamo.index', compact('prestamos', 'nombreyIdLector'));
+            } else {
+                return view('prestamo.index', compact('prestamos'));
+            }
     }
-    return view('prestamo.index', compact('prestamos'));
-}
 
 
     public function create()
     {
-        $numerosSocio = Lector::pluck('NumSocio');
-        return view('prestamo.create', compact('numerosSocio'));
+        $nombreyIdLector = Lector::orderBy('NumSocio', 'DESC')
+        ->select('lectores.NumSocio', 'lectores.Nombre', 'lectores.Apellido' )
+        ->get();
+        return view('prestamo.create', compact('nombreyIdLector'));
     }
 
     public function store(Request $request)

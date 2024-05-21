@@ -20,12 +20,12 @@
     </div>
 
     <div class="form-group">
-        <label for="numSocio">Número de Socio</label>
+        <label for="numSocio">Socio</label>
         <select name="numSocio" id="numSocio" class="form-control">
-            @foreach ($numerosSocio as $numSocio)
-                <option value="{{ $numSocio }}">{{ $numSocio }}</option>
-            @endforeach
-        </select>
+                @foreach ($nombreyIdLector as $lector)
+                    <option value="{{ $lector->NumSocio }}">{{ $lector->NumSocio }} - {{ $lector->Nombre }}  {{ $lector->Apellido }}</option>
+                @endforeach
+            </select>
     </div>
 
     <p></p>
