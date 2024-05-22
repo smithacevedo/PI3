@@ -20,7 +20,7 @@
                 <th>Fecha de Inicio</th>
                 <th>Fecha de Fin</th>
                 <th>Días retraso</th>
-                <th>Valor Multa (500 * Días retraso)</th>
+                <th>Valor Multa (1000 * Días retraso)</th>
                 <th>Acciones</th>
             </tr>
         </thead>

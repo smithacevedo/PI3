@@ -28,7 +28,7 @@ class MultaController extends Controller
             $diferenciaDias = $fechaInicio->diffInDays($fechaFin);
 
             // Calcular el valor de la multa
-            $valorMulta = $diferenciaDias * 500;
+            $valorMulta = $diferenciaDias * 1000;
 
             // Agregar la diferencia de días y el valor de la multa como propiedades a cada multa
             $multa->diferenciaDias = $diferenciaDias;

@@ -6,6 +6,8 @@ use App\Models\Prestamo;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\Lector;
+use App\Models\Libro;
+
 
 class PrestamoController extends Controller
 {
@@ -29,10 +31,13 @@ class PrestamoController extends Controller
                     ->select('lectores.NumSocio', 'lectores.Nombre', 'lectores.Apellido' )
                     ->get();
             $prestamo->nombreyIdLector = $nombreyIdLector;
-    
+
+            $libroId = Libro::orderBy('id', 'DESC') -> select('libros.id','libros.Nombre')->get();
+            $prestamo->libroId = $libroId;
+
         }
          if (isset($nombreyIdLector)) {
-                return view('prestamo.index', compact('prestamos', 'nombreyIdLector'));
+                return view('prestamo.index', compact('prestamos', 'nombreyIdLector', 'libroId'));
             } else {
                 return view('prestamo.index', compact('prestamos'));
             }
@@ -44,7 +49,9 @@ class PrestamoController extends Controller
         $nombreyIdLector = Lector::orderBy('NumSocio', 'DESC')
         ->select('lectores.NumSocio', 'lectores.Nombre', 'lectores.Apellido' )
         ->get();
-        return view('prestamo.create', compact('nombreyIdLector'));
+        $libroId = Libro::orderBy('id', 'DESC') -> select('libros.id','libros.Nombre')->get();
+
+        return view('prestamo.create', compact('nombreyIdLector', 'libroId'));
     }
 
     public function store(Request $request)

@@ -15,16 +15,13 @@ return new class extends Migration
     {
         Schema::create('prestamo', function (Blueprint $table) {
             $table->id();
-           // $table->integer('id_libro'); 
+            $table->unsignedBigInteger('idLibro'); // Changed to unsignedBigInteger
             $table->dateTime('fechaInicio');
             $table->dateTime('fechaFin');
             $table->integer('numSocio'); 
-           // $table->foreign('id_libro')->references('id')->on('libros');
-           $table->foreign('numSocio')->references('NumSocio')->on('lectores');
+            $table->foreign('idLibro')->references('id')->on('libros')->onDelete('cascade');
+            $table->foreign('numSocio')->references('NumSocio')->on('lectores');
             $table->timestamps();
-
-
-            
         });
     }
 

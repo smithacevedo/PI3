@@ -15,14 +15,10 @@ return new class extends Migration
     {
         Schema::create('libros', function (Blueprint $table) {
             $table->id();
-
-
             $table->string('Nombre');
             $table->string('Tipo');
             $table->string('Editorial');
             $table->string('Año');
-
-
             $table->timestamps();
         });
     }

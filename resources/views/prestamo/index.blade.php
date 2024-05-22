@@ -16,11 +16,12 @@
         <thead class="thead-light">
             <tr>
                 <th>Prestamo #</th>
-                <th>Número de Socio</th>
+                <th>Socio</th>
+                <th>Libro</th>
                 <th>Fecha de Inicio</th>
                 <th>Fecha de Fin</th>
                 <th>Valor prestamo</th>
-                <th>Diferencia Dias</th>
+                <th>Dias de prestamo</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -30,10 +31,12 @@
                 <tr>
                 <td>{{ $prestamo->id }}</td>
                 @php
-                        // Buscar el lector correspondiente al NumSocio del prestamo
                         $lector = $nombreyIdLector->firstWhere('NumSocio', $prestamo->numSocio);
+                        $libro = $libroId->firstWhere('id', $prestamo->idLibro);
+
                 @endphp 
                     <td>{{ $prestamo->numSocio }} - {{ $lector->Nombre }}  {{ $lector->Apellido }}</td>
+                    <td>{{ $libro->id }} - {{ $libro->Nombre }}</td>
                     <td>{{ $prestamo->fechaInicio }}</td>
                     <td>{{ $prestamo->fechaFin }}</td>
                     <td>{{ $prestamo->valorPrestamo}}</td>
@@ -45,7 +48,7 @@
                             @csrf
                             @method('DELETE')
                             <input class="btn btn-primary" type="submit"
-                                onclick="return confirm('¿Esta prestamo ya fué pagado?')" value="Pagado">
+                                onclick="return confirm('¿Esta prestamo ya fué pagado?')" value="Entrgado">
                         </form>
                     </td>
                 </tr>

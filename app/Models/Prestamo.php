@@ -15,7 +15,6 @@ class Prestamo extends Model
         'fechaInicio',
         'fechaFin',
         'numSocio',
+        'idLibro',
     ];
 }
-
-
