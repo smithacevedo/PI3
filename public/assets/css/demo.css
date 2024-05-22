@@ -105,3 +105,22 @@
   text-align: center;
   margin-top: 1rem;
 }
+
+
+/* Estilo para agregar puntos de color rojo y verde */
+
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.dot-green {
+  background-color: green;
+}
+
+.dot-red {
+  background-color: red;
+}

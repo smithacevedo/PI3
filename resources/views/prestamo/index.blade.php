@@ -47,7 +47,14 @@
                     <td>{{ $prestamo->fechaFin }}</td>
                     <td>{{ $prestamo->valorPrestamo }}</td>
                     <td>{{ $prestamo->diferenciaDias }}</td>
-                    <td>{{ $prestamo->estado }}</td>
+                    <td>
+                        @if ($prestamo->estado === 'Devuelto')
+                            <span class="dot dot-green"></span>
+                        @else
+                            <span class="dot dot-red"></span>
+                        @endif
+                        {{ $prestamo->estado }}
+                    </td>
                     <td>
                         @if ($prestamo->estado !== 'Devuelto')
                             <!-- Verificar si el estado no es 'devuelto' -->
