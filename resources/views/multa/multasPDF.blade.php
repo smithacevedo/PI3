@@ -25,10 +25,10 @@
                             <thead>
                                 <th>Multa #</th>
                                 <th>Socio</th>
-                                <th>Fecha de Inicio</th>
-                                <th>Fecha de Fin</th>
+                                <th>Fecha Inicio</th>
+                                <th>Fecha Fin</th>
                                 <th>Días retraso</th>
-                                <th>Valor Multa (500 * Días retraso)</th>
+                                <th>Valor Multa (1000 * Días retraso)</th>
                             </thead>
                             <tbody>
                                 @foreach ($multas as $multa)
