@@ -105,7 +105,7 @@ class PrestamoController extends Controller
             Multa::create([
                 'numSocio' => $prestamo->numSocio,
                 'idLibro' => $prestamo->idLibro,
-                'fechaInicio' => $prestamo->fechaInicio,
+                'fechaInicio' => $prestamo->fechaFin,
                 'fechaFin' => $fechaDevolucion,
                 'diferenciaDias' => $diferenciaDias,
                 'valorMulta' => $valorMulta,
