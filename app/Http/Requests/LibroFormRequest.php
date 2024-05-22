@@ -27,7 +27,8 @@ class LibroFormRequest extends FormRequest
             'Nombre' => 'required',
             'Tipo' => 'required',
             'Editorial' => 'required',
-            'Año' => 'required'
+            'Año' => 'required',
+            'max:' . date('Y'), // Asegura que el año no sea mayor al actual
         ];
     }
 
@@ -38,6 +39,7 @@ class LibroFormRequest extends FormRequest
             'Tipo' => 'El campo Tipo no puede estar vacio',
             'Editorial' => 'El campo Editorial no puede estar vacio',
             'Año' => 'El campo Año no puede estar vacio',
+            'Año.max' => 'El campo Año no puede ser mayor al año actual',
         ];
     }
 }

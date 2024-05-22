@@ -39,7 +39,7 @@
 
         <div class="form-group">
             <label for="Año">Año</label>
-            <input type="text" name="Año" id="Año" class="form-control">
+            <input type="number" name="Año" id="Año" class="form-control" min="1900" max="{{ date('Y') }}">
         </div>
 
         <p></p>
