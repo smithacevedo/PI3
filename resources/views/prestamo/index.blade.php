@@ -46,17 +46,16 @@
                             onclick="window.location='{{ url('/prestamo/' . $prestamo->id . '/edit') }}'">Editar</button>
                         <form id="deleteForm" action="{{ url('/prestamo/' . $prestamo->id) }}" method="post"
                             style="display: inline-block;">
-                            <input class="btn btn-primary" type="button" value="Entregado" data-toggle="modal"
-                                data-target="#confirmModal">
+                            <input class="btn btn-primary" type="button" value="Entregado" data-toggle="modal" data-target="#confirmModal{{ $prestamo->id }}">
                         </form>
                     </td>
                 </tr>
                 <!-- Modal de confirmación -->
-                <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+                <div class="modal fade" id="confirmModal{{ $prestamo->id }}" tabindex="-1" aria-labelledby="confirmModalLabel{{ $prestamo->id }}" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="confirmModalLabel">Confirmación</h5>
+                                <h5 class="modal-title" id="confirmModalLabel{{ $prestamo->id }}">Confirmación</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -64,8 +63,7 @@
 
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="fechaFinAcordadaModal" class="font-weight-bold">Fecha acordada de
-                                        devolución:</label>
+                                    <label for="fechaFinAcordadaModal{{ $prestamo->id }}" class="font-weight-bold">Fecha acordada de devolución:</label>
                                     <p class="form-control-plaintext" id="fechaFinAcordadaModal">{{ $prestamo->fechaFin }}</p>
                                 </div>
                                 <div class="form-group">
