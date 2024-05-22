@@ -39,8 +39,6 @@
                     <td>{{ $multa->diferenciaDias }}</td>
                     <td>{{ $multa->valorMulta }}</td> <!-- Mostrar el valor de la multa -->
                     <td>
-                        <button class="btn btn-primary"
-                            onclick="window.location='{{ url('/multa/' . $multa->id . '/edit') }}'">Editar</button>
                         <form action="{{ url('/multa/' . $multa->id) }}" method="post" style="display: inline-block;">
                             @csrf
                             @method('DELETE')

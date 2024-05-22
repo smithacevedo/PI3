@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('prestamo', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('idLibro'); // Changed to unsignedBigInteger
+            $table->unsignedBigInteger('idLibro');
             $table->dateTime('fechaInicio');
             $table->dateTime('fechaFin');
-            $table->integer('numSocio'); 
+            $table->integer('numSocio');
+            $table->string('estado')->default('En préstamo'); 
             $table->foreign('idLibro')->references('id')->on('libros')->onDelete('cascade');
             $table->foreign('numSocio')->references('NumSocio')->on('lectores');
             $table->timestamps();

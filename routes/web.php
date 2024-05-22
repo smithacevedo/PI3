@@ -51,3 +51,4 @@ Route::get('imprimirLibros', 'App\http\Controllers\PdfController@imprimirLibro')
 Route::get('imprimirLectores', 'App\http\Controllers\PdfController@imprimirLector')->name('imprimirLectores');
 Route::get('imprimirMultas', 'App\http\Controllers\PdfController@imprimirMulta')->name('imprimirMultas');
 Route::get('imprimirPrestamo', 'App\http\Controllers\PdfController@imprimirPrestamo')->name('imprimirPrestamo');
+Route::post('/prestamo/confirmar-devolucion/{id}', [PrestamoController::class, 'confirmarDevolucion']);

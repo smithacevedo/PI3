@@ -148,29 +148,7 @@
                   </a>
                 </li>
               </ul>
-            </li>
-
-            <!-- Multa -->
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-wallet"></i>
-                <div data-i18n="Multa">Multas</div>
-            </a>
-                       
-
-              <ul class="menu-sub">
-                  <li class="menu-item">
-                      <a href="/multa/create" class="menu-link">
-                          <div data-i18n="Crear Multa">Crear Multa</div>
-                      </a>
-                  </li>
-                  <li class="menu-item">
-                      <a href="/multa" class="menu-link">
-                          <div data-i18n="Visualizar Multas">Visualizar Multas</div>
-                      </a>
-                  </li>
-              </ul>
-            </li>
+            </li>      
 
             <!-- Prestamo -->
             <li class="menu-item">
@@ -192,6 +170,13 @@
                   </li>
               </ul>
             </li>
+
+            <!-- Multa -->
+            <li class="menu-item">
+              <a href="/multa" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-wallet"></i>
+                <div data-i18n="Multa">Multas</div>
+            </a>
 
 
           </ul>

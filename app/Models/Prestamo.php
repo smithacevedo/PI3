@@ -16,5 +16,6 @@ class Prestamo extends Model
         'fechaFin',
         'numSocio',
         'idLibro',
+        'estado'
     ];
 }
