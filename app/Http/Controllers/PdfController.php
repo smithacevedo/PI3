@@ -91,7 +91,7 @@ class PdfController extends Controller
             $prestamo->diferenciaDias = $diferenciaDias;
             $prestamo->valorPrestamo = $valorPrestamo;
         }
-        $pdf = \PDF::loadView('prestamos.prestamosPDF', compact('prestamos'));
+        $pdf = \PDF::loadView('prestamo.prestamoPDF', compact('prestamos'));
         $pdf->setPaper('carta', 'A4');
 
         return $pdf->stream();

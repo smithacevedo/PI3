@@ -12,7 +12,7 @@
     </head>
 
     <div>
-        <a href="{{ url('imprimirprestamo') }}" class="pull-right">
+        <a href="{{ url('imprimirPrestamo') }}" class="pull-right">
             <button class="btn btn-primary">Imprimir PDF</button>
         </a>
         <br><br />

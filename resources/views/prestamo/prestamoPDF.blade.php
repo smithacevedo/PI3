@@ -1,5 +1,3 @@
-
-
 <html lang="en">
 
 <head>
@@ -16,7 +14,7 @@
                 <h4 class="text-center">BIBLIOTEC</h4>
             </div>
             <div class="row">
-                <h3 class="text-center">Reporte de prestamo</h3>
+                <h3 class="text-center">Registro Prestamos</h3>
             </div>
             <div />
 
@@ -26,10 +24,12 @@
                         <table class="table table-striped table-hover">
                             <thead>
                                 <th>Prestamo #</th>
-                                <th>Número de Socio</th>
-                                <th>Fecha de Inicio</th>
-                                <th>Fecha de Fin</th>
-                                <th>Valor Prestamo</th>
+                                <th>Socio</th>
+                                <th>FechaInicio</th>
+                                <th>FechaFin</th>
+                                <th>Valor</th>
+                                <th>Dias Prestamo</th>
+                                <th>Estado</th>
                             </thead>
                             <tbody>
                                 @foreach ($prestamos as $prestamo)
@@ -38,8 +38,9 @@
                                         <td>{{ $prestamo->numSocio }}</td>
                                         <td>{{ $prestamo->fechaInicio }}</td>
                                         <td>{{ $prestamo->fechaFin }}</td>
-                                        <td>{{ $prestamo->diferenciaDias }}</td>
                                         <td>{{ $prestamo->valorPrestamo }}</td>
+                                        <td>{{ $prestamo->diferenciaDias }}</td>
+                                        <td> {{ $prestamo->estado }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
